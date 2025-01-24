@@ -101,3 +101,41 @@ body {
 .col input:focus {
     outline: none;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .col {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .col div {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .col div {
+        padding: 8px;
+        width: 90%;
+    }
+
+    .col input {
+        font-size: 1.2em;
+    }
+
+    .col label {
+        font-size: 0.8em;
+    }
+}
