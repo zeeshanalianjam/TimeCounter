@@ -1,53 +1,103 @@
-* {
-    padding: 0;
+/* General Reset */
+body, html {
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-.main {
-    width: 100%;
-    height: 100vh;
-    background: url('../image/1802071.webp') center center;
-    background-size: cover;
-}
-
-.overlay {
-    width: 100%;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
     height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
 }
 
-.title {
-    margin-top: 10px;
-    color: white;
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.col {
-    margin-top: 20px;
-    width: 90%;
+/* Background Animation */
+body {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
     display: flex;
     justify-content: center;
-    color: white;
+    align-items: center;
 }
 
+/* Keyframes for Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main container styling */
+.main {
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on container */
+.main:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Overlay Styling */
+.overlay {
+    padding: 20px;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Countdown columns styling */
+.col {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual timer blocks */
 .col div {
-    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    width: 80px;
     text-align: center;
+    transition: background 0.3s ease;
 }
 
-input {
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-color: transparent;
-    border-radius: 5px;
-    height: 50px;
+/* Input and Label Styling */
+.col input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
     text-align: center;
-    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.col label {
+    color: #ddd;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+/* Hover Effect on Timer Block */
+.col div:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Input Focus Effect */
+.col input:focus {
+    outline: none;
 }

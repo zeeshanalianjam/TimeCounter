@@ -1,6 +1,6 @@
 console.log("my js is connected!");
 
-const myDate = '25 Jan 2025 1:59 AM';
+const myDate = '26 Jan 2025 2:00 PM';
 
 const endDate = document.querySelector("#end-date");
 endDate.innerHTML = myDate;
